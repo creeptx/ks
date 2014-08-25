@@ -29,7 +29,6 @@ openssh-server
 yum
 at
 acpid
-vixie-cron
 cronie-noanacron
 crontabs
 logrotate
