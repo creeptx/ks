@@ -16,7 +16,7 @@ zerombr
 clearpart --all --initlabel
 part /boot --fstype ext4 --fsoptions="noatime" --size=200
 part / --fstype ext4 --fsoptions="noatime" --size=2048
-part swap --fstype swap --name=swap --size 1024
+part swap --fstype swap --size 1024
 
 services --enabled=sendmail,network,ntpd,ntpdate
  
