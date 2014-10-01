@@ -41,7 +41,6 @@ sendmail
 mailx
 which
 wget
-quagga
 -postfix
 -prelink
 -selinux-policy-targeted
