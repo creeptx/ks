@@ -1,0 +1,29 @@
+text
+install
+lang en_US.UTF-8
+keyboard us
+timezone Europe/Moscow
+auth --useshadow --enablemd5
+selinux --disabled
+firewall --disabled
+eula --agreed
+ignoredisk --only-use=sda
+reboot
+
+services --enabled=sshd
+
+bootloader --location=mbr
+zerombr
+clearpart --all --initlabel
+part /boot --fstype ext4 --fsoptions="noatime" --size=256
+part / --fstype ext4 --fsoptions="noatime" --size=8192
+part swap --fstype swap --size 1280
+
+rootpw --iscrypted $YOUR_ROOT_PASSWORD_HASH_HERE
+
+url --url http://mirror.yandex.ru/centos/7.0.1406/os/x86_64/
+repo --name=updates --baseurl=http://mirror.yandex.ru/centos/7.0.1406/updates/x86_64/
+
+%packages --nobase --ignoremissing
+@core
+%end
