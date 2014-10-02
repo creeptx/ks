@@ -15,8 +15,8 @@ bootloader --location=mbr
 zerombr
 clearpart --all --initlabel
 part /boot --fstype ext4 --fsoptions="noatime" --size=256
-part / --fstype ext4 --fsoptions="noatime" --size=8192
-part swap --fstype swap --size 1280
+part / --fstype ext4 --fsoptions="noatime" --size=3200
+part swap --fstype swap --size 512
 
 services --enabled=sendmail,network,ntpd,ntpdate
  
