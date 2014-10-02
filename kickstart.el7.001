@@ -23,7 +23,6 @@ services --enabled=sendmail,network,ntpd,ntpdate
 reboot
  
 %packages --nobase
-epel-release
 openssh-clients
 openssh-server
 yum
